@@ -1,0 +1,78 @@
+@font-face {
+  font-family: "jn";
+  src: url("../fonts/JalnanOTF.otf") format("opentype");
+}
+.wrapper {
+  background-color: black;
+  position: relative;
+}
+video {
+  width: 100%;
+}
+p,
+.button {
+  font-family: "맑은고딕";
+  color: white;
+  position: absolute;
+}
+.recommend {
+  font-weight: bold;
+  font-size: 4vw;
+  top: 5%;
+  left: 5%;
+}
+.title {
+  font-size: 4vw;
+  font-weight: bold;
+  top: 30%;
+  left: 5%;
+  width: 30%;
+}
+.summary {
+  font-size: 1.5vw;
+  top: 40%;
+  left: 5%;
+  width: 30%;
+}
+
+.button {
+  top: 70%;
+  font-size: 1.5vw;
+  border-radius: 0.5vw;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: black;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  height: 3vw;
+}
+
+.buttonHover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.button img {
+  height: 2vw;
+  width: 2vw;
+}
+.imgContainer {
+  position: relative;
+}
+.imgContainer img {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.text {
+  position: relative;
+  top: 10%;
+}
+#playBtn {
+  font-weight: bold;
+  left: 5%;
+  width: 8vw;
+}
+
+#infoBtn {
+  left: 15%;
+  width: 11vw;
+}

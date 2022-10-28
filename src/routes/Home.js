@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import Movie from "../components/Movie";
 import Loading from "../components/Loading";
 import Header from "../components/Header";
+import Teaser from "../components/Teaser";
+
 import "./Home.css";
 function Home() {
   const [loading, setLoading] = useState(true);
@@ -24,21 +26,24 @@ function Home() {
       {loading ? (
         <Loading />
       ) : (
-        <div className="container">
-          {movies.map(
-            (
-              movie //그나냥 prop으로 movie 주는게 낫지아난
-            ) => (
-              <Movie
-                key={movie.id}
-                coverImg={movie.medium_cover_image}
-                title={movie.title}
-                summary={movie.summary}
-                genres={movie.genres}
-                id={movie.id}
-              />
-            )
-          )}
+        <div className="Home">
+          <Teaser />
+          <div className="container">
+            {movies.map(
+              (
+                movie //그나냥 prop으로 movie 주는게 낫지아난
+              ) => (
+                <Movie
+                  key={movie.id}
+                  coverImg={movie.medium_cover_image}
+                  title={movie.title}
+                  summary={movie.summary}
+                  genres={movie.genres}
+                  id={movie.id}
+                />
+              )
+            )}
+          </div>
         </div>
       )}
     </div>
