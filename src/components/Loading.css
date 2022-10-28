@@ -1,0 +1,45 @@
+@font-face {
+  font-family: "loadingFont";
+  src: url("../fonts/Multicolore Pro.otf") format("opentype");
+}
+@font-face {
+  font-family: "jn";
+  src: url("../fonts/JalnanOTF.otf") format("opentype");
+}
+@keyframes bg-change {
+  0% {
+    background-size: 150% 150%;
+    background-position: 50% 50%;
+  }
+  100% {
+    background-size: 1000% 1000%;
+    background-position: 50% 50%;
+  }
+}
+#loadingDiv {
+  background: radial-gradient(circle at 50% 50%, black, red);
+  background-size: 100% 100%;
+  color: white;
+  height: 100vh;
+  animation: bg-change 1s ease infinite alternate;
+  position: relative;
+}
+p {
+  position: absolute;
+  margin: 0;
+  margin: auto;
+}
+#loadingP {
+  font-family: "loadingFont";
+  font-size: 8vw;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#tipP {
+  font-family: "jn";
+  font-size: 2vw;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+}
