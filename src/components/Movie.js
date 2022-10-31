@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-import "./Movie.css";
+import styles from "./Movie.module.css";
 
 function Movie({ coverImg, title, summary, genres, id }) {
   const onMouseEnter = (event) => {
@@ -18,13 +18,13 @@ function Movie({ coverImg, title, summary, genres, id }) {
   return (
     <div>
       <Link to={`/movie/${id}`}>
-        <div className="movieDiv">
+        <div className={styles.movieDiv}>
           <img
             src={coverImg}
             onMouseOver={onMouseEnter}
             onMouseOut={onMouseLeave}
           ></img>
-          <div className="modal">
+          <div className={styles.modal}>
             <h2>{title}</h2>
             <p>
               {summary.length > 200 ? `${summary.slice(0, 200)}...` : summary}

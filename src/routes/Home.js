@@ -4,7 +4,7 @@ import Loading from "../components/Loading";
 import Header from "../components/Header";
 import Teaser from "../components/Teaser";
 import Slider from "../components/Slider";
-import "./Home.css";
+import styles from "./Home.module.css";
 function Home() {
   const [loading, setLoading] = useState(true);
   const [movies, setMovies] = useState([]);
@@ -28,11 +28,11 @@ function Home() {
       ) : (
         <div className="Home">
           <Teaser />
-          <div className="container">
-            <Slider title="로맨스" />
-            <Slider title="코미디" />
-            <Slider title="드라마" />
-          </div>
+          <Slider title="로맨스" />
+          <Slider title="코미디" />
+          <Slider title="드라마" />
+
+          <div className="container"></div>
         </div>
       )}
     </div>

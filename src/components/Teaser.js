@@ -1,4 +1,4 @@
-import "./Teaser.css";
+import styles from "./Teaser.module.css";
 import playImg from "../images/play.png";
 import infoImg from "../images/info.png";
 import { useEffect, useState } from "react";
@@ -33,37 +33,37 @@ function Teaser() {
     elem.classList.toggle("buttonHover");
   };
   return (
-    <div className="wrapper">
+    <div className={styles.wrapper}>
       <video
         src={process.env.PUBLIC_URL + "/videos/top2.mp4"}
         autoPlay
         muted
         loop
       ></video>
-      <p className="recommend">당신을 위한 추천 영화 컨텐츠</p>
-      <p className="title">TOP GUN</p>
-      <p className="summary">{summ}</p>
+      <p className={styles.recommend}>당신을 위한 추천 영화 컨텐츠</p>
+      <p className={styles.title}>TOP GUN</p>
+      <p className={styles.summary}>{summ}</p>
       <div
-        id="playBtn"
-        className="button"
+        id={styles.playBtn}
+        className={styles.button}
         onMouseOver={onMouseOver}
         onMouseOut={onMouseOut}
       >
-        <span className="imgContainer">
+        <span className={styles.imgContainer}>
           <img src={playImg} alt="playBtn"></img>
         </span>
-        <span className="text">재생</span>
+        <span className={styles.text}>재생</span>
       </div>
       <div
-        id="infoBtn"
-        className="button"
+        id={styles.infoBtn}
+        className={styles.button}
         onMouseOver={onMouseOver}
         onMouseOut={onMouseOut}
       >
-        <span className="imgContainer">
+        <span className={styles.imgContainer}>
           <img src={infoImg} alt="infoBtn"></img>
         </span>
-        <span className="text">상세정보</span>
+        <span className={styles.text}>상세정보</span>
       </div>
     </div>
   );

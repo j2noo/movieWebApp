@@ -9,11 +9,13 @@
 video {
   width: 100%;
 }
-p,
+
+.wrapper p,
 .button {
   font-family: "맑은고딕";
-  color: white;
+  color: rgb(255, 255, 255);
   position: absolute;
+  margin: auto;
 }
 .recommend {
   font-weight: bold;

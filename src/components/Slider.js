@@ -1,13 +1,16 @@
-import "./Slider.css";
+import styles from "./Slider.module.css";
 
 function Slider({ title }) {
   const arr = ["영화1", "영화2", "영화3", "영화4", "영화5"];
   return (
-    <div className="sliderComponent">
+    <div className={styles.sliderComponent}>
       <p>{title + "타이틀입니다"}</p>
-      <div className="sliderContainer">
+      <div className={styles.sliderContainer}>
         {arr.map((item) => (
-          <div className="sliderItem">{item}</div>
+          <div className={styles.sliderItem} key={item}>
+            {item}
+            <span className="test">test!!!</span>
+          </div>
         ))}
       </div>
     </div>

@@ -16,7 +16,7 @@
     background-position: 50% 50%;
   }
 }
-#loadingDiv {
+.loadingDiv {
   background: radial-gradient(circle at 50% 50%, black, red);
   background-size: 100% 100%;
   color: white;
@@ -24,19 +24,19 @@
   animation: bg-change 1s ease infinite alternate;
   position: relative;
 }
-p {
+.loadingDiv p {
   position: absolute;
   margin: 0;
   margin: auto;
 }
-#loadingP {
+.loadingP {
   font-family: "loadingFont";
   font-size: 8vw;
   top: 15%;
   left: 50%;
   transform: translateX(-50%);
 }
-#tipP {
+.tipP {
   font-family: "jn";
   font-size: 2vw;
   top: 50%;

@@ -1,4 +1,4 @@
-import "./Loading.css";
+import styles from "./Loading.module.css";
 
 function Loading() {
   const tip = [
@@ -10,9 +10,9 @@ function Loading() {
   ];
   const rand = Math.floor(Math.random() * tip.length);
   return (
-    <div id="loadingDiv">
-      <p id="loadingP">Loading..</p>
-      <p id="tipP">{`※ ${tip[rand]}`}</p>
+    <div className={styles.loadingDiv}>
+      <p className={styles.loadingP}>Loading..</p>
+      <p className={styles.tipP}>{`※ ${tip[rand]}`}</p>
     </div>
   );
 }
