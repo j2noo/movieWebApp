@@ -6,7 +6,11 @@ function Teaser() {
   const summary =
     "최고의 파일럿이자 전설적인 인물 매버릭(톰 크루즈)은 자신이 졸업한 훈련학교 교관으로 발탁된다. 그의 명성을 모르던 팀원들은 매버릭의 지시를 무시하지만 실전을 방불케 하는 상공 훈련에서 눈으로 봐도 믿기 힘든 전설적인 조종 실력에 모두가 압도되는데...";
   const [summ, setSumm] = useState(summary);
-  const src = "https://www.youtube.com/watch?v=gNtJ4HdMavo";
+  /* const [resolution, setResolution] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight,
+  }); */
+  //const src = "https://www.youtube.com/watch?v=gNtJ4HdMavo";
   useEffect(() => {
     const onresize = () => {
       if (window.innerWidth < 300) {
@@ -17,6 +21,7 @@ function Teaser() {
         setSumm(summary);
       }
     };
+    onresize();
     window.addEventListener("resize", onresize);
   }, []);
   const onMouseOver = (event) => {

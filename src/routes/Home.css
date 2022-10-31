@@ -1,7 +1,5 @@
 .container {
-  display: flex;
-  flex-wrap: wrap;
-  background-color: black;
+  background-color: rgba(187, 187, 187, 0.562);
 }
 .container > div {
   margin: 50px;

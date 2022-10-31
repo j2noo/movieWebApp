@@ -3,7 +3,7 @@ import Movie from "../components/Movie";
 import Loading from "../components/Loading";
 import Header from "../components/Header";
 import Teaser from "../components/Teaser";
-
+import Slider from "../components/Slider";
 import "./Home.css";
 function Home() {
   const [loading, setLoading] = useState(true);
@@ -29,20 +29,9 @@ function Home() {
         <div className="Home">
           <Teaser />
           <div className="container">
-            {movies.map(
-              (
-                movie //그나냥 prop으로 movie 주는게 낫지아난
-              ) => (
-                <Movie
-                  key={movie.id}
-                  coverImg={movie.medium_cover_image}
-                  title={movie.title}
-                  summary={movie.summary}
-                  genres={movie.genres}
-                  id={movie.id}
-                />
-              )
-            )}
+            <Slider title="로맨스" />
+            <Slider title="코미디" />
+            <Slider title="드라마" />
           </div>
         </div>
       )}
