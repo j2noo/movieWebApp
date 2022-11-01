@@ -7,19 +7,43 @@ import Slider from "../components/Slider";
 import styles from "./Home.module.css";
 function Home() {
   const [loading, setLoading] = useState(true);
-  const [movies, setMovies] = useState([]);
+  const [moviesRate, setMoviesRate] = useState([]);
+  const [moviesCrime, setMoviesCrime] = useState([]);
+  const [moviesHorror, setMoviesHorror] = useState([]);
+  const [moviesThriller, setMoviesThriller] = useState([]);
+
   const getMovies = async () => {
-    const response = await fetch(
-      "https://yts.mx/api/v2/list_movies.json?minimum_rating=9&sort_by=year"
-    );
-    const json = await response.json();
-    setMovies(json.data.movies);
+    const moviesRate = await (
+      await fetch(
+        "https://yts.mx/api/v2/list_movies.json?minimum_rating=9&sort_by=year"
+      )
+    ).json();
+    const moviesCrime = await (
+      await fetch("https://yts.mx/api/v2/list_movies.json?genre=crime&limit=10")
+    ).json();
+    const moviesHorror = await (
+      await fetch(
+        "https://yts.mx/api/v2/list_movies.json?genre=horror&limit=10"
+      )
+    ).json();
+    const moviesThriller = await (
+      await fetch(
+        "https://yts.mx/api/v2/list_movies.json?genre=thriller&limit=10"
+      )
+    ).json();
+
+    setMoviesRate(moviesRate.data.movies);
+    setMoviesCrime(moviesCrime.data.movies);
+    setMoviesHorror(moviesHorror.data.movies);
+    setMoviesThriller(moviesThriller.data.movies);
     setLoading(false);
+
+    console.log(moviesHorror);
   };
   useEffect(() => {
     getMovies();
   }, []);
-  console.log(movies);
+
   return (
     <div>
       <Header />
@@ -28,9 +52,10 @@ function Home() {
       ) : (
         <div className="Home">
           <Teaser />
-          <Slider title="로맨스" />
-          <Slider title="코미디" />
-          <Slider title="드라마" />
+          <Slider title="최고 평점 콘텐츠" movies={moviesRate} />
+          <Slider title="추천 느와르 콘텐츠" movies={moviesCrime} />
+          <Slider title="추천 호러 콘텐츠" movies={moviesHorror} />
+          <Slider title="추천 스릴러 콘텐츠" movies={moviesThriller} />
 
           <div className="container"></div>
         </div>

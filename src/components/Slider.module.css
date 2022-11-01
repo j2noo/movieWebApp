@@ -1,4 +1,17 @@
-.sliderContainer2 {
-  display: flex;
-  flex-wrap: no-wrap;
+.sliderComponent {
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+.title {
+  margin: 0;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  background-color: rgb(0, 0, 0);
+}
+.sliderContainer {
+}
+.sliderImg {
+  /* layout*/
+  width: 100%;
+  border: 1px solid red;
 }

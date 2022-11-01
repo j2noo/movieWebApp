@@ -17,6 +17,9 @@ video {
   position: absolute;
   margin: auto;
 }
+.wrapper p {
+  text-shadow: 1px 1px 1px #000;
+}
 .recommend {
   font-weight: bold;
   font-size: 4vw;
