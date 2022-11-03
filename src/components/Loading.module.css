@@ -21,7 +21,7 @@
   background-size: 100% 100%;
   color: white;
   height: 100vh;
-  animation: bg-change 1s ease infinite alternate;
+  animation: bg-change 2s ease infinite alternate;
   position: relative;
 }
 .loadingDiv p {

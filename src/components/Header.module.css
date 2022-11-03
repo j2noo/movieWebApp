@@ -2,32 +2,38 @@
   font-family: "netflixFont";
   src: url("../fonts/BebasNeue.woff") format("woff");
 }
-nav {
-  background-color: black;
+.header {
+  background-color: rgb(0, 0, 0);
+  height: 3vw;
 }
-nav ul {
+.header ul {
   margin: 0;
+  padding: 0 6vw 0 6vw; /* 영상의 위아래가 검은색이라 중앙인것처럼 조치*/
+  height: 100%;
 }
-nav ul li {
-  color: white;
+.header ul li {
+  height: 100%;
   display: inline-block;
+  margin-right: 5%;
 }
 .sns {
   float: right;
 }
 .sns img {
-  height: 30px;
-  vertical-align: middle;
-  margin: 15px;
+  width: 100%;
+  height: 100%;
 }
 .a {
-  height: 30px;
-  width: 30px;
+  display: inline-block;
+  height: 70%;
+  margin: 15% 0% 15% 0%;
 }
 .fontTrans {
-  font-size: 50px;
+  font-size: 2vw;
   font-family: "netflixFont";
   color: #e50914;
-  display: inline-block;
-  transform: rotate(-5deg);
+}
+.fontTrans div {
+  height: 100%;
+  line-height: 4vw;
 }

@@ -22,38 +22,40 @@ video {
 }
 .recommend {
   font-weight: bold;
-  font-size: 4vw;
+  font-size: 3vw;
   top: 5%;
   left: 5%;
 }
 .title {
-  font-size: 4vw;
+  font-size: 3vw;
   font-weight: bold;
-  top: 30%;
+  top: 60%;
   left: 5%;
   width: 30%;
 }
 .summary {
-  font-size: 1.5vw;
-  top: 40%;
+  font-size: 1.1vw;
+  top: 70%;
   left: 5%;
   width: 30%;
 }
 
 .button {
-  top: 75%;
+  top: 90%;
   font-size: 1.5vw;
   border-radius: 0.5vw;
-  background-color: rgba(255, 255, 255, 0.8);
+
   color: black;
   margin: auto;
   display: flex;
   justify-content: space-around;
   height: 3vw;
 }
-
-.buttonHover {
+.buttonLeave {
   background-color: rgba(255, 255, 255, 0.5);
+}
+.buttonEnter {
+  background-color: rgba(255, 255, 255, 0.8);
 }
 .button img {
   height: 2vw;

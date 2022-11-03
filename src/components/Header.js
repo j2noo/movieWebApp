@@ -4,9 +4,11 @@ import githubImg from "../images/github.png";
 
 function Header() {
   return (
-    <nav>
+    <nav className={styles.header}>
       <ul>
-        <li className={styles.fontTrans}>JINFLIX</li>
+        <li className={styles.fontTrans}>
+          <div>JINFLIX</div>
+        </li>
         <li className={styles.sns}>
           <a className={styles.a} href="https://github.com/j2noo">
             <img src={githubImg} alt="githubImg" />

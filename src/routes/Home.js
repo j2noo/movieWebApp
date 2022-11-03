@@ -5,6 +5,7 @@ import Header from "../components/Header";
 import Teaser from "../components/Teaser";
 import Slider from "../components/Slider";
 import styles from "./Home.module.css";
+
 function Home() {
   const [loading, setLoading] = useState(true);
   const [moviesRate, setMoviesRate] = useState([]);
