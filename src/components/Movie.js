@@ -1,54 +1,37 @@
 import PropTypes from "prop-types";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "./Movie.module.css";
 
-function Movie({ coverImg, title, summary, genres, id }) {
+function Movie({ className, coverImg, title, genres, id }) {
+  const [hoveredId, setHoveredId] = useState(null);
+
+  let hoverClass = `${styles.hovering}`;
   const onMouseEnter = (event) => {
     let modal = event.target.nextSibling;
-    console.log(modal);
-    modal.classList.add("hovering");
-
-    modal.style.visibility = "visible";
+    setHoveredId(event.target.id);
   };
   const onMouseLeave = (event) => {
     let modal = event.target.nextSibling;
-    modal.classList.remove("hovering");
-    modal.style.visibility = "hidden";
+    setHoveredId(null);
   };
   return (
-    <div>
-      <Link to={`/movie/${id}`}>
-        <div className={styles.movieDiv}>
-          <img
-            src={coverImg}
-            onMouseOver={onMouseEnter}
-            onMouseOut={onMouseLeave}
-          ></img>
-          <div className={styles.modal}>
-            <h2>{title}</h2>
-            <p>
-              {summary.length > 200 ? `${summary.slice(0, 200)}...` : summary}
-            </p>
-          </div>
-        </div>
-      </Link>
-
-      {/*
-      
-      <ul>
-        {genres.map((g) => (
-          <li key={g}>{g}</li>
-        ))}
-      </ul>*/}
-    </div>
+    <Link to={`/movie/${id}`} className={styles.imgLink}>
+      <img
+        src={coverImg}
+        onMouseEnter={onMouseEnter}
+        onMouseLeave={onMouseLeave}
+        id={id}
+      ></img>
+      <div
+        className={`${styles.modal}  ${
+          hoveredId == id ? styles.hovering : null /* 마우스가 올라간 요소에만 부여*/
+        }`}
+      >
+        <h2>{title}</h2>
+      </div>
+    </Link>
   );
 }
 
-Movie.propTypes = {
-  coverImg: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  summary: PropTypes.string.isRequired,
-  genres: PropTypes.arrayOf(PropTypes.string).isRequired,
-  id: PropTypes.number.isRequired,
-};
 export default Movie;

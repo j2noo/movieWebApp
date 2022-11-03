@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import Movie from "../components/Movie";
 import Loading from "../components/Loading";
 import Header from "../components/Header";
 import Teaser from "../components/Teaser";

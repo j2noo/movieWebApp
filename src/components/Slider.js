@@ -1,6 +1,6 @@
 import styles from "./Slider.module.css";
-import githubImg from "../images/github.png";
-import { useState } from "react";
+
+import Movie from "../components/Movie";
 
 import { Swiper, SwiperSlide } from "swiper/react"; // basic
 import SwiperCore, { Navigation, Pagination } from "swiper";
@@ -31,12 +31,21 @@ function Slider({ movies, title }) {
           1440: { slidesPerView: 8 },
         }}
       >
-        {movies.map((item, idx) => (
+        {movies.map((movie, idx) => (
           <SwiperSlide key={idx}>
-            <img
+            {/*  <img
               src={item.large_cover_image}
               className={styles.sliderImg}
-            ></img>
+            ></img> */}
+            <Movie
+              className={styles.sliderImg}
+              coverImg={movie.large_cover_image}
+              title={movie.title}
+              genres={movie.genres}
+              id={movie.id}
+            >
+              s
+            </Movie>
           </SwiperSlide>
         ))}
       </Swiper>

@@ -16,6 +16,7 @@
 .hovering {
   animation-name: show-modal;
   animation-duration: 0.8s;
+  visibility: visible;
 }
 @keyframes show-modal {
   from {
@@ -27,4 +28,9 @@
 }
 .movieDiv {
   position: relative;
+}
+.imgLink {
+}
+.imgLink img {
+  width: 100%;
 }
