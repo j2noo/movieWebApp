@@ -10,8 +10,14 @@
   background-color: rgba(0, 0, 0, 0.8);
   font-family: Century Gothic, sans-serif;
 }
-.modal p {
-  font-size: 13px;
+.title,
+.rating {
+  font-size: 100%;
+  text-align: center;
+}
+.modal .genres {
+  font-size: 1.5vw;
+  padding-left: 20px;
 }
 .hovering {
   animation-name: show-modal;
@@ -29,8 +35,7 @@
 .movieDiv {
   position: relative;
 }
-.imgLink {
-}
+
 .imgLink img {
   width: 100%;
 }

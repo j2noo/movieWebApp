@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "./Movie.module.css";
 
-function Movie({ className, coverImg, title, genres, id }) {
+function Movie({ coverImg, title, id, rating, genres }) {
   const [hoveredId, setHoveredId] = useState(null);
 
   let hoverClass = `${styles.hovering}`;
@@ -15,6 +15,18 @@ function Movie({ className, coverImg, title, genres, id }) {
     let modal = event.target.nextSibling;
     setHoveredId(null);
   };
+  function printRating(rating) {
+    let ret = "";
+    rating = Math.round(rating / 2);
+    for (let i = 1; i <= 5; i++) {
+      if (i <= rating) {
+        ret += "★";
+      } else {
+        ret += "☆";
+      }
+    }
+    return ret;
+  }
   return (
     <Link to={`/movie/${id}`} className={styles.imgLink}>
       <img
@@ -25,10 +37,18 @@ function Movie({ className, coverImg, title, genres, id }) {
       ></img>
       <div
         className={`${styles.modal}  ${
-          hoveredId == id ? styles.hovering : null /* 마우스가 올라간 요소에만 부여*/
+          hoveredId == id
+            ? styles.hovering
+            : null /* 마우스가 올라간 요소에만 부여*/
         }`}
       >
-        <h2>{title}</h2>
+        <p className={styles.title}>{title}</p>
+        <p className={styles.rating}>{`${printRating(rating)} / ${rating}`}</p>
+        <ul className={styles.genres}>
+          {genres.map((item) => (
+            <li key={id + item}>{item}</li>
+          ))}
+        </ul>
       </div>
     </Link>
   );

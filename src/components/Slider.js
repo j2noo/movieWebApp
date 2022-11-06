@@ -33,19 +33,13 @@ function Slider({ movies, title }) {
       >
         {movies.map((movie, idx) => (
           <SwiperSlide key={idx}>
-            {/*  <img
-              src={item.large_cover_image}
-              className={styles.sliderImg}
-            ></img> */}
             <Movie
-              className={styles.sliderImg}
               coverImg={movie.large_cover_image}
               title={movie.title}
-              genres={movie.genres}
               id={movie.id}
-            >
-              s
-            </Movie>
+              rating={movie.rating}
+              genres={movie.genres}
+            ></Movie>
           </SwiperSlide>
         ))}
       </Swiper>
