@@ -46,7 +46,7 @@ function Movie({ coverImg, title, id, rating, genres }) {
         <p className={styles.rating}>{`${printRating(rating)} / ${rating}`}</p>
         <ul className={styles.genres}>
           {genres.map((item) => (
-            <li key={id + item}>{item}</li>
+            <li key={id + item}>{"- " + item}</li>
           ))}
         </ul>
       </div>

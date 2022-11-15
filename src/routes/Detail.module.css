@@ -1,18 +1,27 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
 .background {
   width: 100vw;
   height: 100vh;
   text-align: center;
 }
+.info,
+.image {
+  float: left;
+  margin-top: 10%;
+  height: 300px;
+}
 .info {
-  display: inline-block;
-  border: 1px solid black;
-  background-color: rgba(255, 255, 255, 0.8);
-  height: inherit;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-left: 10px;
+  text-align: left;
+  line-height: normal;
 }
 .image {
-  width: 30%;
-  height: auto;
-}
-.genre {
-  list-style-type: disc;
+  margin-left: 10%;
 }

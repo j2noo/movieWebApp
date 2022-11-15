@@ -24,7 +24,7 @@ function Teaser() {
   useEffect(() => {
     const onresize = () => {
       if (window.innerWidth < 500) {
-        setSumm("");
+        setSumm(summary.slice(0, 37) + "...");
       } else if (window.innerWidth < 750) {
         setSumm(summary.slice(0, 50) + "되는데...");
       } else {

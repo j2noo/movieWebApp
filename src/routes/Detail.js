@@ -40,7 +40,7 @@ function Detail() {
             <li>
               <ul className={styles.genre}>
                 {movie.genres.map((item) => (
-                  <li>{item}</li>
+                  <li>{"- " + item}</li>
                 ))}
               </ul>
             </li>

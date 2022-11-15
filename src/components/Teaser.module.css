@@ -34,10 +34,11 @@ video {
   width: 30%;
 }
 .summary {
-  font-size: 1.1vw;
+  font-size: 1.2vw;
   top: 70%;
   left: 5%;
   width: 30%;
+  line-height: normal;
 }
 
 .button {
@@ -71,7 +72,7 @@ video {
 }
 .text {
   position: relative;
-  top: 10%;
+  top: 25%;
 }
 #playBtn {
   font-weight: bold;

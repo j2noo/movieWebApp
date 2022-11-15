@@ -3,7 +3,7 @@
   src: url("../fonts/BebasNeue.woff") format("woff");
 }
 .header {
-  background-color: rgb(0, 0, 0);
+  background-color: black;
   height: 3vw;
 }
 .header ul {
@@ -14,7 +14,7 @@
 .header ul li {
   height: 100%;
   display: inline-block;
-  margin-right: 5%;
+  margin-right: 3%;
 }
 .sns {
   float: right;
@@ -35,5 +35,6 @@
 }
 .fontTrans div {
   height: 100%;
-  line-height: 4vw;
+  /*  line-height: 4vw; */
+  font-size: 3.5vw;
 }

@@ -12,11 +12,13 @@
 }
 .title,
 .rating {
+  padding-top: 10px;
   font-size: 100%;
   text-align: center;
 }
 .modal .genres {
-  font-size: 1.5vw;
+  font-size: 70%;
+  padding-top: 10px;
   padding-left: 20px;
 }
 .hovering {

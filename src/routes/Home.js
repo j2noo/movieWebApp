@@ -45,19 +45,17 @@ function Home() {
   }, []);
 
   return (
-    <div>
+    <div className={styles.container}>
       <Header />
       {loading ? (
         <Loading />
       ) : (
-        <div className="Home">
+        <div className={styles.home}>
           <Teaser />
           <Slider title="최고 평점 콘텐츠" movies={moviesRate} />
           <Slider title="추천 느와르 콘텐츠" movies={moviesCrime} />
           <Slider title="추천 호러 콘텐츠" movies={moviesHorror} />
           <Slider title="추천 스릴러 콘텐츠" movies={moviesThriller} />
-
-          <div className="container"></div>
         </div>
       )}
     </div>
