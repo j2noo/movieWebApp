@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/movieWebApp/static/css/main.a9b4b6ec.css",
-    "main.js": "/movieWebApp/static/js/main.77a439a0.js",
+    "main.css": "/movieWebApp/static/css/main.acd1d02a.css",
+    "main.js": "/movieWebApp/static/js/main.4beb0a5b.js",
     "static/media/JalnanOTF.otf": "/movieWebApp/static/media/JalnanOTF.86da5126c7c0cc28e869.otf",
     "static/media/Multicolore Pro.otf": "/movieWebApp/static/media/Multicolore Pro.1431e7446a38b4905d30.otf",
     "static/media/github.png": "/movieWebApp/static/media/github.ad0ae076e26515438924.png",
@@ -9,11 +9,11 @@
     "static/media/BebasNeue.woff": "/movieWebApp/static/media/BebasNeue.0530034bc171613e88f0.woff",
     "static/media/info.png": "/movieWebApp/static/media/info.9c4331cd5fbc551e3cc6.png",
     "index.html": "/movieWebApp/index.html",
-    "main.a9b4b6ec.css.map": "/movieWebApp/static/css/main.a9b4b6ec.css.map",
-    "main.77a439a0.js.map": "/movieWebApp/static/js/main.77a439a0.js.map"
+    "main.acd1d02a.css.map": "/movieWebApp/static/css/main.acd1d02a.css.map",
+    "main.4beb0a5b.js.map": "/movieWebApp/static/js/main.4beb0a5b.js.map"
   },
   "entrypoints": [
-    "static/css/main.a9b4b6ec.css",
-    "static/js/main.77a439a0.js"
+    "static/css/main.acd1d02a.css",
+    "static/js/main.4beb0a5b.js"
   ]
 }
